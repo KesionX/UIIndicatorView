@@ -1,7 +1,8 @@
 # UIIndicatorView
 这是一个用于viewpage的一个索引指示器
-
+This is an index indicator for the UIViewpage.
 ## pod install
+you can user pod install into your project. as following
 ``` ruby
 target 'Pro' do
 pod 'UIIndicatorView'
@@ -13,7 +14,9 @@ end
 
 ## 使用
 可用于viewpage索引指标控件，可以参考下以下用法
+Can be used index indicator, you can refer to the following usage.
  ### 例一
+ eg:
 ``` oc
     UIIndicatorView *indicator = [[UIIndicatorView alloc] initUIIndicatorViewWithFrame:CGRectMake(10, 20, [UIScreen mainScreen].bounds.size.width - 40, 100) style:UIIndicatorViewDefaultStyle arrays:@[@"KESION", @"WENDYTING", @"TIPO", @"BLOW", @"SUCCESS"]];
     [self.view addSubview:indicator];
@@ -27,7 +30,7 @@ end
 
 
 ### 例二
-
+eg:
 ``` cpp
 {
     [self.indicatorView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,6 +57,7 @@ end
 }
 ```
 如果你想有动画效果那么需要对UIScrollerView进行监听，且在delegate中加下面的代码
+If you want to animate, you need to listen to the UIScrollerView and add the following code to the delegate.
 ``` cpp
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
