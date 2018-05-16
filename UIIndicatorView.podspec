@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "UIIndicatorView"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "UIIndicatorView can user for viewpage , you can show some index."
   s.description  = "Studying make me happy"
   s.homepage     = "https://github.com/Kesion-X/UIIndicatorView.git"
