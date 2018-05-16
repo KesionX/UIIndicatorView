@@ -288,7 +288,7 @@
         case UIIndicatorViewDefaultStyle:
         {
             self.indicatorView.layer.cornerRadius = (8+[NSString getSizeWithAttributes:@"K" font:self.contentFont].height)/2;
-            self.indicatorHeight = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB;
+            self.indicatorHeight = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB*2;
             self.indicatorY = self.topPointDraw;
             self.indicatorView.layer.masksToBounds = YES;
             break;
