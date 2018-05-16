@@ -12,6 +12,20 @@ end
 
 ## 使用
 可用于viewpage索引指标控件，可以参考下以下用法
+ ### 例一
+``` oc
+    UIIndicatorView *indicator = [[UIIndicatorView alloc] initUIIndicatorViewWithFrame:CGRectMake(10, 20, [UIScreen mainScreen].bounds.size.width - 40, 100) style:UIIndicatorViewDefaultStyle arrays:@[@"KESION", @"WENDYTING", @"TIPO", @"BLOW", @"SUCCESS"]];
+    [self.view addSubview:indicator];
+    
+    
+    UIIndicatorView *indicator2 = [[UIIndicatorView alloc] initUIIndicatorViewWithFrame:CGRectMake(10, 150, [UIScreen mainScreen].bounds.size.width - 40, 100) style:UIIndicatorViewLineStyle arrays:@[@"KESION", @"WENDYTING", @"TIPO", @"BLOW", @"SUCCESS"]];
+    [self.view addSubview:indicator2];
+```
+
+![](https://github.com/Kesion-X/UIIndicatorView/blob/master/IMG_3443.GIF)
+
+
+### 例二
 
 ``` cpp
 
@@ -39,3 +53,7 @@ end
 
 
 ```
+
+
+
+
