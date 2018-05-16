@@ -68,13 +68,6 @@
 {
     self = [super init];
     if (self) {
-//        self.showsHorizontalScrollIndicator = FALSE;
-//        self.isEnableAutoScroll = YES;
-//        self.leftPointDraw = kINDICATOR_MARGIN_LR;
-//        self.topPointDraw = kINDICATOR_MARGIN_TB;
-//        self.itemArrays = [[NSMutableArray alloc] init];
-//        self.height = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB*2+kINDICATOR_MARGIN_TB*2;//设定高度为item控件高度+边距
-//        [self setBackgroundColor:[UIColor whiteColor]];
     }
     return self;
 }
