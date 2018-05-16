@@ -252,9 +252,9 @@
 - (void)changeIndicatorByScrollerView:(UIScrollView *)scrollView
 {
     CGFloat x = scrollView.contentOffset.x;
-    if (fabs(x-preOffsetX)>200) {//此处当向右滑动到第三个界面时offset从0开始，暂时还没找到原因，进行判定控制，offset被重置为0的情况
-        return;
-    }
+//    if (fabs(x-preOffsetX)>200) {//此处当向右滑动到第三个界面时offset从0开始，暂时还没找到原因，进行判定控制，offset被重置为0的情况
+//        return;
+//    }
     if (x!=SCREEN_WIDTH&&x!=0) {
         offsetDistance +=(x - preOffsetX);
         preOffsetX = x;
