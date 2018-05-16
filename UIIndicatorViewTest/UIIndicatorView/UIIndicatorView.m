@@ -150,7 +150,7 @@
                                       arrays:arrays
                                         font:Font(18)
                              textNormalColor:kTEXTCOLOR
-                              textLightColor:kTUBEBOOK_THEME_NORMAL_COLOR
+                              textLightColor:kTAB_TEXT_COLOR
                           isEnableAutoScroll:NO];
     if (self) {
        // [self setCurrentIndicator:0];
@@ -288,7 +288,7 @@
         case UIIndicatorViewDefaultStyle:
         {
             self.indicatorView.layer.cornerRadius = (8+[NSString getSizeWithAttributes:@"K" font:self.contentFont].height)/2;
-            self.indicatorHeight = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB*2;
+            self.indicatorHeight = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB;
             self.indicatorY = self.topPointDraw;
             self.indicatorView.layer.masksToBounds = YES;
             break;
@@ -302,7 +302,11 @@
         default:
             break;
     }
-    [self addSubview:self.indicatorView];
+    if (self.itemArrays.count>0) {
+        [self insertSubview:self.indicatorView belowSubview:self.itemArrays[0]];
+    } else {
+        [self addSubview:self.indicatorView];
+    }
     [self initOffset];
     [self setShowIndicatorItem:0];
 }

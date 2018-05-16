@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIIndicatorView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIIndicatorView *indicator = [[UIIndicatorView alloc] initUIIndicatorViewWithFrame:CGRectMake(10, 20, [UIScreen mainScreen].bounds.size.width - 40, 100) style:UIIndicatorViewDefaultStyle arrays:@[@"KESION", @"WENDYTING", @"TIPO"]];
+    [indicator setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:indicator];
 }
 
 
