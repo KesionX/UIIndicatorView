@@ -1,6 +1,17 @@
 # UIIndicatorView
-可用于viewpage索引指标控件
 
+## pod install
+``` ruby
+target 'Pro' do
+pod 'UIIndicatorView'
+end
+
+```
+
+
+
+## 使用
+可用于viewpage索引指标控件，可以参考下以下用法
 
 ``` cpp
 
