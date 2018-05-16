@@ -28,21 +28,22 @@ end
 ### 例二
 
 ``` cpp
+{
+    [self.indicatorView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.addNewAttention.mas_bottom).offset(4);
+        make.left.equalTo(self).offset(8);
+        make.right.equalTo(self).offset(-8);
+        make.height.mas_equalTo([self.indicatorView getUIHeight]);
+    }];
+    [_indicatorView addIndicatorItemByString:@"Tube最新内容"];
+    [_indicatorView addIndicatorItemByString:@"推荐"];
+    [_indicatorView addIndicatorItemByString:@"关注专题"];
+    [_indicatorView addIndicatorItemByString:@"关注连载"];
+    [_indicatorView addIndicatorItemByString:@"关注作者"];
 
-[self.indicatorView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.top.equalTo(self.addNewAttention.mas_bottom).offset(4);
-    make.left.equalTo(self).offset(8);
-    make.right.equalTo(self).offset(-8);
-    make.height.mas_equalTo([self.indicatorView getUIHeight]);
-}];
-[_indicatorView addIndicatorItemByString:@"Tube最新内容"];
-[_indicatorView addIndicatorItemByString:@"推荐"];
-[_indicatorView addIndicatorItemByString:@"关注专题"];
-[_indicatorView addIndicatorItemByString:@"关注连载"];
-[_indicatorView addIndicatorItemByString:@"关注作者"];
+    [self.indicatorView setShowIndicatorItem:0];
 
-[self.indicatorView setShowIndicatorItem:0];
-
+}
 - (UIIndicatorView *)indicatorView
 {
     if (!_indicatorView) {
@@ -50,10 +51,15 @@ end
     }
     return _indicatorView;
 }
-
-
 ```
-
+如果你想有动画效果那么需要对UIScrollerView进行监听，且在delegate中加下面的代码
+``` cpp
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+   [self.tubeNavigationView.indicatorView changeIndicatorIndexByScrollerView:scrollView];
+}
+```
 
 
 
