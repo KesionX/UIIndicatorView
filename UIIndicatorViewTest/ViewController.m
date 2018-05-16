@@ -17,8 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIIndicatorView *indicator = [[UIIndicatorView alloc] initUIIndicatorViewWithFrame:CGRectMake(10, 20, [UIScreen mainScreen].bounds.size.width - 40, 100) style:UIIndicatorViewDefaultStyle arrays:@[@"KESION", @"WENDYTING", @"TIPO"]];
-    [indicator setBackgroundColor:[UIColor grayColor]];
+    UIIndicatorView *indicator = [[UIIndicatorView alloc] initUIIndicatorViewWithFrame:CGRectMake(10, 20, [UIScreen mainScreen].bounds.size.width - 40, 100) style:UIIndicatorViewDefaultStyle arrays:@[@"KESION", @"WENDYTING", @"TIPO", @"BLOW", @"SUCCESS"]];
     [self.view addSubview:indicator];
 }
 

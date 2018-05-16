@@ -151,7 +151,7 @@
                                         font:Font(18)
                              textNormalColor:kTEXTCOLOR
                               textLightColor:kTAB_TEXT_COLOR
-                          isEnableAutoScroll:NO];
+                          isEnableAutoScroll:YES];
     if (self) {
        // [self setCurrentIndicator:0];
     }
