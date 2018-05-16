@@ -1,4 +1,5 @@
 # UIIndicatorView
+这是一个用于viewpage的一个索引指示器
 
 ## pod install
 ``` ruby
