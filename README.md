@@ -60,6 +60,6 @@ end
    [self.tubeNavigationView.indicatorView changeIndicatorIndexByScrollerView:scrollView];
 }
 ```
-
+![](https://github.com/Kesion-X/UIIndicatorView/blob/master/image2.gif)
 
 
