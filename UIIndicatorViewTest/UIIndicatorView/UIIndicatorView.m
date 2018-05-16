@@ -296,7 +296,7 @@
         case UIIndicatorViewLineStyle:
         {
             self.indicatorHeight = kINDICATOR_MARGIN_LR/4;
-            self.indicatorY = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB*2 + kINDICATOR_MARGIN_LR;
+            self.indicatorY = [NSString getSizeWithAttributes:@"K" font:self.contentFont].height+kITEM_MARGIN_TB*2 + kINDICATOR_MARGIN_LR/2;
             break;
         }
         default:
