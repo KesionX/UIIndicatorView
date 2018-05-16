@@ -144,14 +144,21 @@
 
 - (instancetype)initUIIndicatorViewWithFrame:(CGRect)frame style:(UIIndicatorViewStyle)style arrays:(NSArray *)arrays
 {
+    UIColor *stypeLightColor = nil;
+    if (style == UIIndicatorViewDefaultStyle) {
+        stypeLightColor = HEXCOLOR(0xffffff);
+    } else {
+        stypeLightColor = kTUBEBOOK_THEME_NORMAL_COLOR;
+    }
+    
     self = [self initUIIndicatorViewWithFrame:frame
                                indicatorColor:kTUBEBOOK_THEME_NORMAL_COLOR
-                                       style:style
-                                      arrays:arrays
-                                        font:Font(18)
-                             textNormalColor:kTEXTCOLOR
-                              textLightColor:kTAB_TEXT_COLOR
-                          isEnableAutoScroll:YES];
+                                        style:style
+                                       arrays:arrays
+                                         font:Font(18)
+                              textNormalColor:kTEXTCOLOR
+                               textLightColor:stypeLightColor
+                           isEnableAutoScroll:YES];
     if (self) {
        // [self setCurrentIndicator:0];
     }
