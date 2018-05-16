@@ -244,7 +244,7 @@
 
 - (void)changeIndicatorIndexByScrollerView:(UIScrollView *)scrollView
 {
-    [self changeIndicatorIndexByScrollerView:scrollView];
+    [self changeIndicatorByScrollerView:scrollView];
 }
 
 #pragma mark - private
