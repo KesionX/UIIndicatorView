@@ -65,9 +65,27 @@ If you want to animate, you need to listen to the UIScrollerView and add the fol
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-   [self.tubeNavigationView.indicatorView changeIndicatorIndexByScrollerView:scrollView];
+   [self.indicatorView changeIndicatorIndexByScrollerView:scrollView];
 }
 ```
+如果你想监听当前索引的改变,可以使用UIIndicatorView的代理.
+If you want to listen for changes in the current index, you can use the proxy for UIIndicatorView. as following
+```
+@protocol UIIndicatorViewDelegate <NSObject>
+
+@optional
+- (void) indicatorItemsClick:(NSUInteger)index;
+
+@end
+@interface ViewController () <UIIndicatorViewDelegate>
+
+@end
+- (void)viewDidLoad 
+{
+   self.indicatorView.indicatorDelegate = self;
+}
+```
+
 ![](https://github.com/Kesion-X/UIIndicatorView/blob/master/image2.gif)
 
 
