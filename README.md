@@ -68,9 +68,9 @@ If you want to animate, you need to listen to the UIScrollerView and add the fol
    [self.indicatorView changeIndicatorIndexByScrollerView:scrollView];
 }
 ```
-如果你想监听当前索引的改变,可以使用UIIndicatorView的代理.
+如果你想监听当前索引的点击事件,可以使用UIIndicatorView的代理.
 
-If you want to listen for changes in the current index, you can use the proxy for UIIndicatorView. as following
+If you want to listen for index indicator click action, you can use the proxy for UIIndicatorView. as following
 ```
 @protocol UIIndicatorViewDelegate <NSObject>
 
